@@ -1,0 +1,49 @@
+:root {
+  --paper: #F1F4F0;
+  --surface: #FFFFFF;
+  --ink: #1B2420;
+  --ink-2: #44524B;
+  --muted: #6B7A72;
+  --line: #D5DDD5;
+  --jade: #15655A;
+  --radius: 14px;
+  --font-ui: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", Meiryo, system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0F1513;
+    --surface: #18211D;
+    --ink: #E6ECE8;
+    --ink-2: #B9C6BF;
+    --muted: #8A9A92;
+    --line: #2A3631;
+    --jade: #5FB3A4;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  line-height: 1.75;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 40px 16px 56px; }
+h1 { font-size: 1.6rem; margin: 0 0 4px; }
+h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+.lead { color: var(--ink-2); margin: 0 0 28px; }
+.apps { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.app {
+  display: block;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: inherit;
+  text-decoration: none;
+}
+.app:hover { border-color: var(--jade); }
+.app__name { font-weight: 700; font-size: 1.1rem; color: var(--jade); }
+.app__desc { margin: 4px 0 0; color: var(--ink-2); font-size: .95rem; }
+a { color: var(--jade); }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
